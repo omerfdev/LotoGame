@@ -1,6 +1,21 @@
-﻿
+﻿Console.WriteLine("LOTO GAME ! PLEASE ENTER THE NUMBER OF COLUMNS");
+int[] lottery2firm = new int[6];
+for (int i = 0; i < lottery2firm.Length; i++)
+{
+    Random rnd = new Random();
+    int number = rnd.Next(1, 91);
+    int isExist = Array.IndexOf(lottery2firm, number);
+    if (isExist == -1)
+    {
+        lottery2firm[i] = number;
+    }
 
-Console.WriteLine("LOTO GAME ! PLEASE ENTER THE NUMBER OF COLUMNS");
+    else
+    {
+        i--;
+    }
+
+}
 
 int[] lottery = new int[6];
 int columns=Convert.ToInt32(Console.ReadLine());
@@ -32,7 +47,7 @@ for (int j = 0; j < columns; j++)
 
         }
        
-        Console.WriteLine("");
+        Console.WriteLine(lottery.Intersect(lottery2firm).Count());
 
     }
     
