@@ -3,18 +3,18 @@ using System.ComponentModel.Design;
 
 Console.WriteLine("LOTO GAME ! PLEASE ENTER THE NUMBER OF COLUMNS");
 
-int[] kolon = new int[6];
+int[] lottery = new int[6];
 int columns=Convert.ToInt32(Console.ReadLine());
 for (int j = 0; j < columns; j++)
 {
-    for (int i = 0; i < kolon.Length; i++)
+    for (int i = 0; i < lottery.Length; i++)
     {
         Random rnd = new Random();
-        int sayi = rnd.Next(1, 91);
-        int varmı = Array.IndexOf(kolon, sayi);
-        if (varmı == -1)
+        int number = rnd.Next(1, 91);
+        int isExist = Array.IndexOf(lottery, number);
+        if (isExist == -1)
         {
-            kolon[i] = sayi;
+            lottery[i] = number;
         }
 
         else
@@ -23,10 +23,10 @@ for (int j = 0; j < columns; j++)
         }
 
     }
-    if (kolon.Count()==6)
+    if (lottery.Count()==6)
     {
-        Array.Sort(kolon);
-        foreach (var item in kolon)
+        Array.Sort(lottery);
+        foreach (var item in lottery)
         {
             Console.Write(item + " ");
 
