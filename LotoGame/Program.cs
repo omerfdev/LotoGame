@@ -46,8 +46,15 @@ for (int j = 0; j < columns; j++)
             
 
         }
-       
-        Console.WriteLine(lottery.Intersect(lottery2firm).Count());
+        if (lottery.Intersect(lottery2firm).Count()>3)
+        {
+            Console.WriteLine("\tCongratulations Match Number Count: " + lottery.Intersect(lottery2firm).Count());
+        }
+        else
+        {
+            Console.WriteLine("\tTry Again Match Number Count: " + lottery.Intersect(lottery2firm).Count());
+        }
+        
 
     }
     
