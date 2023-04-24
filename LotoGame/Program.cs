@@ -1,5 +1,4 @@
-﻿using System.Collections.Immutable;
-using System.ComponentModel.Design;
+﻿
 
 Console.WriteLine("LOTO GAME ! PLEASE ENTER THE NUMBER OF COLUMNS");
 
@@ -23,14 +22,16 @@ for (int j = 0; j < columns; j++)
         }
 
     }
-    while (lottery.Count()==6)
+    if (lottery.Count()==6)
     {
         Array.Sort(lottery);
         foreach (var item in lottery)
         {
             Console.Write(item + " ");
+            
 
         }
+       
         Console.WriteLine("");
 
     }
