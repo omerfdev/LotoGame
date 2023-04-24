@@ -23,7 +23,7 @@ for (int j = 0; j < columns; j++)
         }
 
     }
-    if (lottery.Count()==6)
+    while (lottery.Count()==6)
     {
         Array.Sort(lottery);
         foreach (var item in lottery)
