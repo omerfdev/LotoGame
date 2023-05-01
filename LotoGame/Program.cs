@@ -15,7 +15,6 @@ for (int j = 0; j < columns; j++)
         {
             lottery[i] = number;
         }
-
         else
         {
             i--;
@@ -28,17 +27,8 @@ for (int j = 0; j < columns; j++)
         foreach (var item in lottery)
         {
             Console.Write(item + " ");
-            
-
         }
-       
-        Console.WriteLine("");
-
+               Console.WriteLine("");
     }
-    
-    
 }
-
-
-
 Console.ReadLine();
